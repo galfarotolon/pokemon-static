@@ -7,8 +7,9 @@ interface Props {
   children: React.ReactNode;
 }
 
+const origin = typeof window === "undefined" ? "" : window.location.origin;
+
 export const Layout: FC<Props> = ({ title, children }) => {
-  const origin = typeof window === "undefined" ? "" : window.location.origin;
   return (
     <>
       <Head>
